@@ -1,16 +1,21 @@
-# DiScience Inc. – Website Redesign
+# DiScience Inc. – Website Redesign & User Guide
 
-A completely modern, premium, professional, responsive, and **100% self-contained/independent** website built from scratch for **DiScience Inc. / DiScience Technology Solutions**.
+A modern, aesthetic, responsive, and **100% self-contained/independent** website built from scratch for **DiScience Inc. / DiScience Technology Solutions** (https://discienceinc.com/).
 
 ---
 
 ## 🌟 Executive Summary & Key Highlights
 
-- **100% Offline & URL-Independent**: The entire website operates directly from local files without relying on external CDNs, third-party APIs, or live server endpoints. Font files (Inter & Plus Jakarta Sans) and the Lucide Icon library (`js/lucide.min.js`) are fully self-hosted.
-- **Strict Clean Tech Stack**: Built purely with semantic **HTML5**, **CSS3**, **Vanilla JavaScript**, and **Browser LocalStorage**. Zero dependencies on React, Next.js, Vue, Angular, Bootstrap, Tailwind, Node.js, PHP, or external databases.
-- **Authentic Brand & Content**: All company details, service descriptions, portfolio projects, and legal documentation were sourced directly from company materials and the official URL, preserving genuine technical identity without fabricated stats or artificial filler.
-- **Real Asset Curation**: Utilized original high-resolution assets from `discience_images`, organizing them into a structured directory and matching the genuine DiScience circular blue emblem logo and project screenshots.
-- **Interactive LocalStorage Persistence**: Versioned client-side storage handles contact form inquiries, cookie consent preferences, and portfolio filter retention.
+- **Aesthetic & Modern UI/UX**: Designed with dark navy aesthetics (`#0A1124`, `#101B35`), electric blue glow accents (`#246BFD`), purple undertones (`#8B5CF6`), glassmorphism cards, glowing ambient orbs, smooth scroll reveals, micro-interactions, and animated counter metrics.
+- **100% Self-Contained & Offline-Ready**: The entire website operates directly by double-clicking `index.html` in any web browser. Zero external CDN dependencies—fonts (Inter & Plus Jakarta Sans WOFF2) and Lucide Icons (`js/lucide.min.js`) are fully self-hosted locally.
+- **Color-Coded Mobile App Showcase**:
+  - 🟢 **Islamic Events**: Styled with an emerald green theme (`#059669`) using genuine green application screenshots (`assets/images/portfolio/islamic-events-app.png`, `islamic-events-screen-1.jpeg`, `islamic-events-screen-2.jpeg`).
+  - 🌸 **Event Buddy**: Styled with a vibrant magenta/pink theme (`#DB2777` / `#9D174D`) using genuine pink application screenshots (`assets/images/portfolio/event-buddy-app.png`, `event-buddy-screen-1.jpeg`, `event-buddy-screen-2.jpeg`).
+- **Direct Official Android App Store Links**:
+  - **Islamic Events (Google Play Store)**: [https://play.google.com/store/apps/details?id=com.discience.islamicEvents&hl=en](https://play.google.com/store/apps/details?id=com.discience.islamicEvents&hl=en)
+  - **Event Buddy (Google Play Store)**: [https://play.google.com/store/apps/details?id=com.discience.eventbuddy&hl=en_CA&gl=US](https://play.google.com/store/apps/details?id=com.discience.eventbuddy&hl=en_CA&gl=US)
+- **Dedicated Interactive User Guide Page**: `user-guide.html` provides visitors and clients with comprehensive instructions on website navigation, detailed feature walkthroughs for both mobile applications, service exploration, and an FAQ accordion.
+- **Pure Native Tech Stack**: Zero React, Vue, Next.js, Angular, Bootstrap, Tailwind, Node.js, PHP, or external databases. Built strictly with semantic HTML5, CSS3, Vanilla JavaScript, and LocalStorage.
 
 ---
 
@@ -18,132 +23,155 @@ A completely modern, premium, professional, responsive, and **100% self-containe
 
 ```
 discience/
-├── index.html                     # Homepage (Hero, Intro, Services, Works, Why Choose Us, Expertise, CTA, Footer)
-├── about.html                     # About Page (Overview, Mission, Vision, Core Values, 4-Stage Approach)
-├── services.html                  # Services Page (BI & Data Warehouse, Cloud Migration, Data Integration, App Dev, Web Dev, QA)
-├── portfolio.html                 # Portfolio Page (Interactive filterable gallery + Project Detail Modal)
-├── expertise.html                 # Technical Expertise (7 Engineering Domains + DevOps/CI Architecture)
-├── contact.html                   # Contact Page (Validated Inquiries Form + LocalStorage Submissions Viewer)
-├── privacy.html                   # Privacy & Cookies Policy (Complete official 14-section policy with Table of Contents)
+├── index.html              # Homepage with hero, services, featured projects, why us, expertise, CTA
+├── about.html              # Company story, leadership principles, mission/vision, by-the-numbers stats
+├── services.html           # 6 core enterprise services with sticky anchor navigation & app store links
+├── portfolio.html          # Interactive gallery with 8 projects, category filters, detail modal & app links
+├── expertise.html          # 7 technical discipline cards & engineering methodology
+├── contact.html            # Contact inquiry form with client-side validation & LocalStorage saving
+├── privacy.html            # Formal GDPR/CCPA-aligned privacy policy & cookie management
+├── user-guide.html         # Interactive user guide covering site navigation, apps walkthrough & FAQ
 │
 ├── assets/
-│   ├── fonts/                     # Self-hosted WOFF2 fonts (Inter & Plus Jakarta Sans)
-│   │   ├── font_0.woff2 ... font_6.woff2
-│   ├── icons/                     # Brand identity & favicons
-│   │   ├── discience-logo.png     # Official DiScience circular blue emblem logo
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   └── favicon-180x180.png
+│   ├── fonts/              # Self-hosted WOFF2 fonts (Inter & Plus Jakarta Sans)
+│   ├── icons/              # DiScience circular emblem, favicons (16x16, 32x32, 180x180)
 │   └── images/
-│       ├── about/                 # Team collaboration, mission/vision, excellence graphics
-│       ├── expertise/             # Domain graphics (BI, cloud, mobile, web, QA, DevOps)
-│       ├── hero/                  # Main banner & workspace graphics
-│       ├── portfolio/             # Hana Solution, SAP BI, Islamic Events, Event Buddy, etc.
-│       └── services/              # High-res architectural visuals for all 6 service lines
+│       ├── hero/           # Hero visual showcase and consulting workspace imagery
+│       ├── services/       # Content-matched service visuals (BI, Cloud, Integration, App, Web, QA)
+│       ├── portfolio/      # Color-matched screenshots (Islamic Events in Green, Event Buddy in Pink)
+│       ├── expertise/      # Technical domain graphics
+│       └── about/          # Collaboration, mission, and lab showcase visuals
 │
 ├── css/
-│   ├── fonts.css                  # Self-hosted font declarations (zero external Google requests)
-│   ├── style.css                  # Core design tokens, typography, shared header, footer, buttons
-│   ├── pages.css                  # Page-specific components (hero, service cards, portfolio grid, modal, forms)
-│   ├── animations.css             # Scroll reveal transitions, keyframes, prefers-reduced-motion support
-│   └── responsive.css             # Multi-breakpoint layout rules (1200px, 1024px, 768px, 640px, 480px)
+│   ├── style.css           # Core design system, variables, layouts, glassmorphism, buttons, cards
+│   ├── pages.css           # Page-specific grids, subpage heroes, sticky navigation
+│   ├── animations.css      # 14 custom keyframes (shimmer, orbs, pulse, gradientShift, reveals)
+│   ├── responsive.css      # Fluid breakpoints (Desktop 1440px+, Laptop 1024px, Tablet 768px, Mobile 375px+)
+│   └── fonts.css           # @font-face rules referencing local WOFF2 font files
 │
 ├── js/
-│   ├── lucide.min.js              # Self-hosted Lucide Icons library (zero external CDN dependency)
-│   ├── storage.js                 # LocalStorage API manager with versioned keys and error handling
-│   ├── navigation.js              # Sticky header, active link highlight, mobile drawer toggle
-│   ├── portfolio.js               # Category filter engine & interactive case detail modal
-│   ├── contact.js                 # Real-time form validation & LocalStorage inquiry submission engine
-│   ├── animations.js              # IntersectionObserver scroll reveals & smooth back-to-top scrolling
-│   └── main.js                    # Lucide initialization, cookie banner logic, current year injection
+│   ├── main.js             # Global coordinator, Lucide icon hydration, cookie consent, animated counters
+│   ├── navigation.js       # Sticky header state, mobile drawer toggle, active link indicators
+│   ├── portfolio.js        # Filter button handler with LocalStorage retention
+│   ├── contact.js          # Form validation, sanitized submission, LocalStorage storage engine
+│   ├── animations.js       # IntersectionObserver scroll reveal engine
+│   ├── storage.js          # Safe LocalStorage wrapper with error handling & versioning
+│   └── lucide.min.js       # Self-hosted Lucide Icons library
 │
-└── screenshots/                   # Desktop and mobile responsive verification captures
+├── screenshots/            # Visual verification screenshots across desktop and mobile viewports
+├── verify_site.py          # Automated verification script testing all 8 pages for link & image integrity
+└── README.md               # Master documentation and reference guide
 ```
 
 ---
 
-## 🚀 How to Run the Website
+## 🧭 Complete Website Navigation & User Guide
 
-Because the site is 100% independent and static:
+### 1. Homepage (`index.html`)
+- **Hero Section**: Modern dark navy gradient with floating ambient glowing orbs, bold typography, animated gradient headline, and key metric badges.
+- **Services Showcase**: 6 interactive service cards featuring gradient top-border glow transitions on hover.
+- **Featured Projects**: Highlights Hana Solution, SAP BI, Islamic Events (with Green theme and Play Store download button), and Event Buddy (with Pink theme and Play Store download button).
+- **Why Choose Us**: Glassmorphism cards with gradient icons highlighting team experience, innovation, and 24/7 support.
+- **Interactive Metrics**: Live animated number counters displaying years of experience, projects delivered, and client satisfaction.
 
-1. **Direct File Mode**: Double-click `index.html` in file explorer. It will open directly in any modern browser (Chrome, Edge, Firefox, Safari).
-2. **Local HTTP Server (Optional)**:
-   ```bash
-   python -m http.server 8000
-   ```
-   Then open `http://localhost:8000/` in your browser.
+### 2. Services Page (`services.html`)
+- **Sticky Navigation Bar**: A pinned horizontal bar allowing visitors to smoothly jump between all 6 core services:
+  1. *BI & Data Warehouse*
+  2. *Cloud Migration*
+  3. *Data Integration*
+  4. *App Development* (includes direct links to download Islamic Events & Event Buddy on Google Play)
+  5. *Web Development*
+  6. *Quality Assurance*
+- **Action CTAs**: Every service block includes dedicated consultation inquiry links pre-configured for the contact page.
 
-No internet access is required. All fonts, scripts, styles, and assets resolve locally.
+### 3. Portfolio Page (`portfolio.html`)
+- **Interactive Filtering**: Filter projects by *All Projects*, *Mobile Applications*, *Web Development*, *Enterprise Solutions*, or *Data & BI*. The selected filter is saved to browser LocalStorage.
+- **Color-Themed Cards**:
+  - **Islamic Events**: Green badge, emerald green accent border, green Google Play button.
+  - **Event Buddy**: Pink badge, vibrant magenta accent border, pink Google Play button.
+- **Project Detail Modal**: Clicking "View Details" opens a modal displaying the problem context, solution delivered, capabilities, tech stack, screenshots gallery, and direct Play Store download buttons.
 
----
+### 4. Technical Expertise (`expertise.html`)
+- Deep dive into DiScience's core disciplines: Mobile Engineering, Fullstack Web, Enterprise ERP / SAP HANA, Business Intelligence, Cloud Technologies, Data Engineering, and Quality Assurance.
 
-## 💾 LocalStorage Implementation Details
+### 5. Dedicated User Guide (`user-guide.html`)
+- **Site Navigation Guide**: Visual roadmap detailing what each section of the website contains.
+- **Islamic Events App Guide**:
+  - Detailed feature breakdown (Prayer schedules, masjid event publishing, community notifications).
+  - Green-themed layout with official screenshots.
+  - Direct Google Play Store download button.
+- **Event Buddy App Guide**:
+  - Detailed feature breakdown (Organization registration, catering details, guest scanning, ticket tracking).
+  - Pink-themed layout with official screenshots.
+  - Direct Google Play Store download button.
+- **Client Engagement Walkthrough**: 4-step process explaining how to initiate an enterprise software consulting engagement.
+- **Interactive FAQ Accordion**: Expandable answers to common client questions regarding platforms, security, support, and deployment.
 
-All client-side persistence is managed via `js/storage.js` with versioned keys:
-
-| Key | Version | Purpose |
-| :--- | :--- | :--- |
-| `discience_cookie_consent_v1` | `v1` | Records user's consent choice (`accepted`, `rejected`, or `custom`) and analytics preferences. |
-| `discience_contact_inquiries_v1` | `v1` | Stores inquiries submitted via the Contact form with timestamps and client details. |
-| `discience_portfolio_filter_v1` | `v1` | Remembers the visitor's selected portfolio category filter across page reloads. |
-
-> ⚠️ **Important Notice Regarding Contact Inquiries**:
-> As specified in the PRD, this is a client-side frontend implementation without a backend email server. All submitted inquiries are safely persisted directly inside the visitor's browser **LocalStorage** (`discience_contact_inquiries_v1`). They are not transmitted over external email servers. Users can expand the *"View Your Saved Local Submissions"* drawer on `contact.html` to review their stored records.
-
----
-
-## 📄 Page-by-Page Breakdown
-
-1. **Home (`index.html`)**:
-   - Sticky header with official DiScience logo, navigation, and CTA.
-   - High-impact split hero section with bold typography, CTA buttons, metrics strip, and floating feature badges.
-   - Company introduction highlighting DiScience as an enterprise technology partner.
-   - 6 Core Service Cards (BI & Data Warehouse, Cloud Migration, Data Integration, App Development, Web Development, Quality Assurance).
-   - Featured Projects showcase (Hana Solution, SAP BI, Islamic Events, Event Buddy).
-   - "Why Choose DiScience?" value proposition grid.
-   - Technical Expertise preview and high-conversion Call to Action banner.
-   - Complete multi-column footer with contact details, quick links, and legal links.
-   - Accessible Cookie Consent banner with customizable settings modal.
-
-2. **About Us (`about.html`)**:
-   - Executive company overview and engineering philosophy.
-   - Mission and Vision split visual cards.
-   - Core Values (Technical Integrity, Innovation First, Client-Centricity, Continuous Support).
-   - 4-Stage Delivery Approach (Discovery, Architecture, Engineering & QA, Deployment & Support).
-
-3. **Services (`services.html`)**:
-   - In-depth architectural breakdown for each of the 6 core practices.
-   - Feature checklists, key benefits, and dedicated consultation CTAs with prefilled inquiry routing.
-
-4. **Portfolio (`portfolio.html`)**:
-   - Filterable gallery: *All Projects*, *Mobile Applications*, *Web Development*, *Enterprise Solutions*, *Data & BI*.
-   - Filter persistence in LocalStorage.
-   - Interactive project detail modal featuring problem statements, delivered solutions, feature lists, tech stacks, and mobile screenshots.
-
-5. **Technical Expertise (`expertise.html`)**:
-   - Comprehensive matrix covering 7 core engineering domains plus DevOps & CI/CD infrastructure.
-   - Granular capability lists, architecture overviews, and technology stacks.
-
-6. **Contact (`contact.html`)**:
-   - Direct contact card with official email (`hussam.zeeshan@discienceinc.com`).
-   - Comprehensive contact form with real-time field validation (Full Name, Email, Phone, Subject, Message).
-   - Client storage notice and interactive viewer for reviewing saved local submissions.
-
-7. **Privacy and Cookies Policy (`privacy.html`)**:
-   - Complete official policy preserving all 14 legal sections.
-   - Sticky Table of Contents sidebar for instant anchor navigation.
-   - Detailed personal data processing table (Usage, Account, Publication, Enquiry, Transaction, Notification data).
-   - Cookie categories explanation and browser management guidance.
+### 6. Contact Page (`contact.html`)
+- **Contact Form**: Fields for Full Name, Email Address, Phone Number, Subject, and Project Message.
+- **Form Validation**: Real-time checking for required fields, valid email syntax, and character minimums.
+- **LocalStorage Data Persistence**: Inquiries are saved safely in the visitor's browser `LocalStorage` under `discience_inquiries_v1`.
+- ⚠️ **Important Note**: Submissions remain in the user's browser storage for demonstration and review purposes and are not dispatched to live SMTP servers (zero backend architecture).
 
 ---
 
-## 📱 Responsive Verification & Accessibility
+## 📱 Mobile Applications Reference
 
-The design was tested across standard viewport sizes:
-- **Desktop (1440px+)**: Multi-column editorial grids, floating glass badges, expanded navigation.
-- **Laptop (1024px)**: Fluid layouts, optimized column gaps.
-- **Tablet (768px)**: 2-column to 1-column card transitions, full-width action buttons.
-- **Mobile (375px to 640px)**: Compact mobile header with slide-in drawer, stacked stat strips, touch-friendly tap targets (>44px), zero horizontal overflow.
-- **Reduced Motion**: Full support for `@media (prefers-reduced-motion: reduce)`, disabling CSS transforms and animations for sensitive users.
-#   d i s c i e n c e  
- 
+| Application | Primary Theme | Google Play Store Link | Key Target Audience |
+|---|---|---|---|
+| **Islamic Events** | Emerald Green (`#059669`) | [Google Play](https://play.google.com/store/apps/details?id=com.discience.islamicEvents&hl=en) | Masajids, Muslim community centers & event attendees |
+| **Event Buddy** | Vibrant Pink (`#DB2777`) | [Google Play](https://play.google.com/store/apps/details?id=com.discience.eventbuddy&hl=en_CA&gl=US) | Event planners, corporate organizers & non-profits |
+
+---
+
+## 🧪 Automated Site Verification
+
+Run the Python verification test at any time to validate all 8 HTML pages, internal links, stylesheets, scripts, and local images:
+
+```powershell
+python verify_site.py
+```
+
+Expected result:
+```
+=== VERIFYING ALL 8 PAGES ===
+--- Checking index.html ---
+  Validated: 11 images, 51 internal page links.
+--- Checking about.html ---
+  Validated: 7 images, 35 internal page links.
+--- Checking services.html ---
+  Validated: 8 images, 36 internal page links.
+--- Checking portfolio.html ---
+  Validated: 10 images, 36 internal page links.
+--- Checking expertise.html ---
+  Validated: 10 images, 35 internal page links.
+--- Checking contact.html ---
+  Validated: 2 images, 33 internal page links.
+--- Checking privacy.html ---
+  Validated: 2 images, 33 internal page links.
+--- Checking user-guide.html ---
+  Validated: 10 images, 58 internal page links.
+>>> ALL 8 PAGES PASSED INTEGRITY CHECKS!
+```
+
+---
+
+## 🎨 Design System Specifications
+
+| Token | Value | Purpose |
+|---|---|---|
+| `--primary-navy` | `#101B35` | Main brand dark background |
+| `--primary-navy-dark` | `#0A1124` | Hero and deep surface background |
+| `--accent-blue` | `#246BFD` | Primary action buttons and focus states |
+| `--accent-blue-glow` | `rgba(36, 107, 253, 0.25)` | Ambient glowing backdrop orbs |
+| `--islamic-green` | `#059669` / `#047857` | Islamic Events app branding |
+| `--eventbuddy-pink` | `#DB2777` / `#9D174D` | Event Buddy app branding |
+| `--bg-main` | `#F5F7FB` | Crisp light body background |
+| `--bg-surface` | `#FFFFFF` | Clean card and component surfaces |
+| `--font-heading` | `Plus Jakarta Sans` | Bold, modern display typography |
+| `--font-body` | `Inter` | Clean, highly legible body copy |
+
+---
+
+## 📄 License & Credits
+© DiScience Inc. All rights reserved. Built as a high-performance, independent static website.

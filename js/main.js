@@ -80,3 +80,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+// Animated counter on scroll
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter-number');
+  if (!counters.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting || entry.target.dataset.animated) return;
+      entry.target.dataset.animated = 'true';
+      const target = parseInt(entry.target.dataset.target || '0', 10);
+      const duration = 1800;
+      const start = performance.now();
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        entry.target.textContent = Math.round(ease * target) + (entry.target.dataset.suffix || '');
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => obs.observe(c));
+}
+animateCounters();
+

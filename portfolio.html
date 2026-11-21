@@ -48,6 +48,7 @@
           <li><a href="services.html" class="nav-link">Services</a></li>
           <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
           <li><a href="expertise.html" class="nav-link">Expertise</a></li>
+          <li><a href="user-guide.html" class="nav-link">User Guide</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -72,6 +73,7 @@
       <li><a href="services.html" class="mobile-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
       <li><a href="portfolio.html" class="mobile-nav-link active">Portfolio <i data-lucide="chevron-right"></i></a></li>
       <li><a href="expertise.html" class="mobile-nav-link">Expertise <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="user-guide.html" class="mobile-nav-link">User Guide <i data-lucide="chevron-right"></i></a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact <i data-lucide="chevron-right"></i></a></li>
       <li><a href="privacy.html" class="mobile-nav-link">Privacy Policy <i data-lucide="chevron-right"></i></a></li>
     </ul>
@@ -174,66 +176,84 @@
         </div>
 
         <!-- 3. Islamic Events -->
-        <div class="project-card reveal" data-category="mobile">
-          <div class="project-image-box">
-            <img src="assets/images/portfolio/islamic-events-app.png" alt="Islamic Events Mobile Application" width="640" height="550">
-            <span class="project-badge-tag">Mobile Application</span>
+        <div class="project-card reveal" data-category="mobile" style="border-top: 3px solid #059669;">
+          <div class="project-image-box" style="position: relative; overflow: hidden;">
+            <img src="assets/images/portfolio/islamic-events-app.png" alt="Islamic Events Mobile Application - Green Theme" width="640" height="550" style="width: 100%; height: 260px; object-fit: cover; object-position: top; transition: transform 0.4s ease;">
+            <span class="project-badge-tag" style="background: rgba(5, 150, 105, 0.95); color: #fff;">Mobile Application</span>
           </div>
           <div class="project-info-body">
-            <h3 class="project-name">Islamic Events</h3>
+            <h3 class="project-name" style="color: #065F46;">Islamic Events</h3>
             <p class="project-desc">
               A one stop shop for managing events of Islamic Organizations. Manage and share all masjid events with the app dedicated to Islamic Organizations. Available on Google Play Store and iOS App Store.
             </p>
             <div class="project-tech-pills">
-              <span class="tech-pill">iOS App Store</span>
-              <span class="tech-pill">Google Play</span>
-              <span class="tech-pill">Public Scheduling</span>
+              <span class="tech-pill" style="background: rgba(5, 150, 105, 0.1); color: #059669; border-color: rgba(5, 150, 105, 0.2);">iOS App Store</span>
+              <span class="tech-pill" style="background: rgba(5, 150, 105, 0.1); color: #059669; border-color: rgba(5, 150, 105, 0.2);">Google Play</span>
+              <span class="tech-pill" style="background: rgba(5, 150, 105, 0.1); color: #059669; border-color: rgba(5, 150, 105, 0.2);">Masjid Scheduling</span>
             </div>
-            <button class="project-action-btn view-detail-trigger"
-                    data-title="Islamic Events"
-                    data-category="Mobile Application"
-                    data-desc="A one stop shop for managing events of Islamic Organizations. Manage and share all masjid events with the app dedicated to Islamic Organizations. Event management app for muslim organizations & masajids."
-                    data-problem="Masajids and Islamic organizations lacked a unified, dedicated public platform to coordinate and publish prayer schedules, educational seminars, and community events."
-                    data-solution="Developed a dedicated mobile app published to both Google Play Store and iOS App Store enabling organizations to easily manage events and community members to track schedules."
-                    data-features="Masjid event calendars, public event schedule sharing, push notification reminders, multi-organization management, user guide."
-                    data-tech="iOS App Store, Google Play Store, Mobile Backend, Cloud Sync"
-                    data-img="assets/images/portfolio/islamic-events-app.png"
-                    data-screen1="assets/images/portfolio/islamic-events-screen-1.jpeg"
-                    data-screen2="assets/images/portfolio/islamic-events-screen-2.jpeg">
-              View Project Details <i data-lucide="arrow-right" style="width: 16px;"></i>
-            </button>
+            <div style="display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;">
+              <a href="https://play.google.com/store/apps/details?id=com.discience.islamicEvents&hl=en" target="_blank" rel="noopener noreferrer" class="app-store-btn" style="background: linear-gradient(135deg, #059669, #047857); border-color: rgba(255,255,255,0.2);">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.97.08l13.1-7.57-2.84-2.84-11.23 10.33zm-1.07-20.4a1.3 1.3 0 0 0-.11.52v16.24c0 .18.04.36.11.52l.07.07 9.1-9.1v-.22L2.18 3.29l-.07.07zm20.08 8.86-2.9-1.68-3.17 3.17 3.17 3.17 2.92-1.68c.83-.48.83-1.5-.02-1.98zM4.15.24L17.25 7.8l-2.84 2.84L4.15.72a.92.92 0 0 1 0-1.48V.24z"/></svg>
+                <div><span class="app-store-btn-label">Get it on</span><span class="app-store-btn-name">Google Play</span></div>
+              </a>
+              <button class="project-action-btn view-detail-trigger"
+                      data-title="Islamic Events"
+                      data-category="Mobile Application"
+                      data-theme="green"
+                      data-playstore="https://play.google.com/store/apps/details?id=com.discience.islamicEvents&hl=en"
+                      data-desc="A one stop shop for managing events of Islamic Organizations. Manage and share all masjid events with the app dedicated to Islamic Organizations. Event management app for muslim organizations & masajids."
+                      data-problem="Masajids and Islamic organizations lacked a unified, dedicated public platform to coordinate and publish prayer schedules, educational seminars, and community events."
+                      data-solution="Developed a dedicated mobile app published to both Google Play Store and iOS App Store enabling organizations to easily manage events and community members to track schedules."
+                      data-features="Masjid event calendars, public event schedule sharing, push notification reminders, multi-organization management, user guide."
+                      data-tech="iOS App Store, Google Play Store, Mobile Backend, Cloud Sync"
+                      data-img="assets/images/portfolio/islamic-events-app.png"
+                      data-screen1="assets/images/portfolio/islamic-events-screen-1.jpeg"
+                      data-screen2="assets/images/portfolio/islamic-events-screen-2.jpeg"
+                      style="margin-top: 0;">
+                View Details <i data-lucide="arrow-right" style="width: 16px;"></i>
+              </button>
+            </div>
           </div>
         </div>
 
         <!-- 4. Event Buddy -->
-        <div class="project-card reveal" data-category="mobile">
-          <div class="project-image-box">
-            <img src="assets/images/portfolio/event-buddy-app.png" alt="Event Buddy Application" width="640" height="550">
-            <span class="project-badge-tag">Mobile Application</span>
+        <div class="project-card reveal" data-category="mobile" style="border-top: 3px solid #DB2777;">
+          <div class="project-image-box" style="position: relative; overflow: hidden;">
+            <img src="assets/images/portfolio/event-buddy-app.png" alt="Event Buddy Application - Pink Theme" width="640" height="550" style="width: 100%; height: 260px; object-fit: cover; object-position: top; transition: transform 0.4s ease;">
+            <span class="project-badge-tag" style="background: rgba(219, 39, 119, 0.95); color: #fff;">Mobile Application</span>
           </div>
           <div class="project-info-body">
-            <h3 class="project-name">Event Buddy</h3>
+            <h3 class="project-name" style="color: #9D174D;">Event Buddy</h3>
             <p class="project-desc">
               A one stop shop for managing events of Organizations. Manage and share all events with the app dedicated to Organizations. Available on Google Play Store and iOS App Store.
             </p>
             <div class="project-tech-pills">
-              <span class="tech-pill">Cross-Platform App</span>
-              <span class="tech-pill">Organization Schedules</span>
-              <span class="tech-pill">User Guide Included</span>
+              <span class="tech-pill" style="background: rgba(219, 39, 119, 0.1); color: #DB2777; border-color: rgba(219, 39, 119, 0.2);">Cross-Platform App</span>
+              <span class="tech-pill" style="background: rgba(219, 39, 119, 0.1); color: #DB2777; border-color: rgba(219, 39, 119, 0.2);">Google Play</span>
+              <span class="tech-pill" style="background: rgba(219, 39, 119, 0.1); color: #DB2777; border-color: rgba(219, 39, 119, 0.2);">User Guide Included</span>
             </div>
-            <button class="project-action-btn view-detail-trigger"
-                    data-title="Event Buddy"
-                    data-category="Mobile Application"
-                    data-desc="A one stop shop for managing events of Organizations. Manage and share all events with the app dedicated to Organizations. Event management app available on google playstore and iOS appstore."
-                    data-problem="Organizations required a lightweight, intuitive mobile application to manage, distribute, and broadcast organizational schedules and public events."
-                    data-solution="Engineered Event Buddy, a complete event management application with administrative controls, attendee tracking, and cross-platform mobile access."
-                    data-features="Central event registry, attendee notifications, schedule sharing, organizational user guide, cloud synchronization."
-                    data-tech="iOS App Store, Google Play Store, Cloud Sync, Push Engine"
-                    data-img="assets/images/portfolio/event-buddy-app.png"
-                    data-screen1="assets/images/portfolio/event-buddy-screen-1.jpeg"
-                    data-screen2="assets/images/portfolio/event-buddy-screen-2.jpeg">
-              View Project Details <i data-lucide="arrow-right" style="width: 16px;"></i>
-            </button>
+            <div style="display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;">
+              <a href="https://play.google.com/store/apps/details?id=com.discience.eventbuddy&hl=en_CA&gl=US" target="_blank" rel="noopener noreferrer" class="app-store-btn" style="background: linear-gradient(135deg, #DB2777, #9D174D); border-color: rgba(255,255,255,0.2);">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.97.08l13.1-7.57-2.84-2.84-11.23 10.33zm-1.07-20.4a1.3 1.3 0 0 0-.11.52v16.24c0 .18.04.36.11.52l.07.07 9.1-9.1v-.22L2.18 3.29l-.07.07zm20.08 8.86-2.9-1.68-3.17 3.17 3.17 3.17 2.92-1.68c.83-.48.83-1.5-.02-1.98zM4.15.24L17.25 7.8l-2.84 2.84L4.15.72a.92.92 0 0 1 0-1.48V.24z"/></svg>
+                <div><span class="app-store-btn-label">Get it on</span><span class="app-store-btn-name">Google Play</span></div>
+              </a>
+              <button class="project-action-btn view-detail-trigger"
+                      data-title="Event Buddy"
+                      data-category="Mobile Application"
+                      data-theme="pink"
+                      data-playstore="https://play.google.com/store/apps/details?id=com.discience.eventbuddy&hl=en_CA&gl=US"
+                      data-desc="A one stop shop for managing events of Organizations. Manage and share all events with the app dedicated to Organizations. Event management app available on google playstore and iOS appstore."
+                      data-problem="Organizations required a lightweight, intuitive mobile application to manage, distribute, and broadcast organizational schedules and public events."
+                      data-solution="Engineered Event Buddy, a complete event management application with administrative controls, attendee tracking, and cross-platform mobile access."
+                      data-features="Central event registry, attendee notifications, schedule sharing, organizational user guide, cloud synchronization."
+                      data-tech="iOS App Store, Google Play Store, Cloud Sync, Push Engine"
+                      data-img="assets/images/portfolio/event-buddy-app.png"
+                      data-screen1="assets/images/portfolio/event-buddy-screen-1.jpeg"
+                      data-screen2="assets/images/portfolio/event-buddy-screen-2.jpeg"
+                      style="margin-top: 0;">
+                View Details <i data-lucide="arrow-right" style="width: 16px;"></i>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -412,6 +432,18 @@
         </div>
       </div>
 
+      <!-- App Download Bar (only shown for mobile apps with Play Store link) -->
+      <div id="modalDownloadBox" style="display: none; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; margin-bottom: 20px; align-items: center; justify-content: space-between; gap: 16px;">
+        <div>
+          <span style="font-weight: 700; color: #1E293B; display: block; font-size: 0.9375rem;" id="modalDownloadTitle">Download App</span>
+          <span style="font-size: 0.8125rem; color: #64748B;">Official release available on Google Play</span>
+        </div>
+        <a id="modalPlayStoreLink" href="#" target="_blank" rel="noopener noreferrer" class="app-store-btn" style="padding: 8px 16px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;"><path d="M3.18 23.76c.3.17.65.19.97.08l13.1-7.57-2.84-2.84-11.23 10.33zm-1.07-20.4a1.3 1.3 0 0 0-.11.52v16.24c0 .18.04.36.11.52l.07.07 9.1-9.1v-.22L2.18 3.29l-.07.07zm20.08 8.86-2.9-1.68-3.17 3.17 3.17 3.17 2.92-1.68c.83-.48.83-1.5-.02-1.98zM4.15.24L17.25 7.8l-2.84 2.84L4.15.72a.92.92 0 0 1 0-1.48V.24z"/></svg>
+          <div><span class="app-store-btn-label">Get it on</span><span class="app-store-btn-name">Google Play</span></div>
+        </a>
+      </div>
+
       <div style="display: flex; justify-content: flex-end; gap: 12px;">
         <a href="contact.html" class="btn btn-primary btn-sm">Inquire About Similar Project</a>
       </div>
@@ -567,6 +599,24 @@
             screenRow.style.display = 'block';
           } else {
             screenRow.style.display = 'none';
+          }
+
+          // Check if Play Store link exists
+          const downloadBox = document.getElementById('modalDownloadBox');
+          const playLink = document.getElementById('modalPlayStoreLink');
+          if (btn.dataset.playstore) {
+            playLink.href = btn.dataset.playstore;
+            document.getElementById('modalDownloadTitle').textContent = `Download ${btn.dataset.title}`;
+            if (btn.dataset.theme === 'green') {
+              playLink.style.background = 'linear-gradient(135deg, #059669, #047857)';
+            } else if (btn.dataset.theme === 'pink') {
+              playLink.style.background = 'linear-gradient(135deg, #DB2777, #9D174D)';
+            } else {
+              playLink.style.background = '#101B35';
+            }
+            downloadBox.style.display = 'flex';
+          } else {
+            downloadBox.style.display = 'none';
           }
 
           modal.classList.add('is-open');

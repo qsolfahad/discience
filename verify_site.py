@@ -1,8 +1,8 @@
 import os
 from bs4 import BeautifulSoup
 
-pages = ['index.html', 'about.html', 'services.html', 'portfolio.html', 'expertise.html', 'contact.html', 'privacy.html']
-print("=== VERIFYING ALL 7 PAGES ===")
+pages = ['index.html', 'about.html', 'services.html', 'portfolio.html', 'expertise.html', 'contact.html', 'privacy.html', 'user-guide.html']
+print("=== VERIFYING ALL 8 PAGES ===")
 
 all_valid = True
 

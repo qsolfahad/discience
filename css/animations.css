@@ -1,45 +1,102 @@
 /* ==========================================================================
-   DISCIENCE INC. - ANIMATIONS & TRANSITIONS
+   DISCIENCE INC. - ANIMATIONS & TRANSITIONS (PREMIUM REDESIGN)
    ========================================================================== */
 
-/* Keyframe Definitions */
+/* ==========================================================================
+   KEYFRAME DEFINITIONS
+   ========================================================================== */
+
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Glowing shimmer sweep across elements */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* Slowly shifting gradient background */
+@keyframes gradientShift {
+  0%   { background-position: 0%   50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0%   50%; }
+}
+
+/* Large decorative background orb blobs */
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%       { transform: translate(30px, -20px) scale(1.05); }
+  50%       { transform: translate(10px, 30px) scale(0.95); }
+  75%       { transform: translate(-20px, 10px) scale(1.02); }
+}
+
+/* Number counter animation */
+@keyframes counterUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Typewriter cursor blink */
+@keyframes typewriter {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Pulsing blue glow */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(36, 107, 253, 0.5),
+                0 0 20px rgba(36, 107, 253, 0.2);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    box-shadow: 0 0 0 14px rgba(36, 107, 253, 0),
+                0 0 40px rgba(36, 107, 253, 0.4);
   }
 }
 
+/* Slide-in reveal animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scale from 0.9 to 1 */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Legacy / existing keyframes kept for compatibility */
 @keyframes floatGentle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(36, 107, 253, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 12px rgba(36, 107, 253, 0);
-  }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(36, 107, 253, 0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(36, 107, 253, 0); }
 }
+
+/* ==========================================================================
+   SCROLL REVEAL CLASSES
+   ========================================================================== */
 
 /* Ensure Above-the-fold elements are always immediately visible */
 .hero-section .reveal,
@@ -51,7 +108,6 @@
   transform: none !important;
 }
 
-/* Intersection Observer Scroll Reveal Classes */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -59,7 +115,6 @@
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -71,7 +126,6 @@
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .reveal-left.is-visible {
   opacity: 1;
   transform: translateX(0);
@@ -83,51 +137,114 @@
   transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
 .reveal-right.is-visible {
   opacity: 1;
   transform: translateX(0);
 }
 
+/* Scale reveal — updated to use scaleIn keyframe */
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.95);
+  transform: scale(0.9);
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
-
 .reveal-scale.is-visible {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Delay Helpers */
+/* ==========================================================================
+   STAGGER HELPERS  (.stagger-1 → .stagger-6)
+   ========================================================================== */
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ==========================================================================
+   DELAY HELPERS
+   ========================================================================== */
+
 .delay-100 { transition-delay: 100ms; }
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
 .delay-500 { transition-delay: 500ms; }
 
-/* Micro-interactions */
-.float-animation {
-  animation: floatGentle 5s ease-in-out infinite;
+/* ==========================================================================
+   MICRO-INTERACTION UTILITY CLASSES
+   ========================================================================== */
+
+/* Shimmer loader / highlight */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.18) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 2.2s linear infinite;
 }
 
-.pulse-animation {
-  animation: pulseGlow 2.5s infinite;
+/* Animated gradient background */
+.gradient-animated {
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease infinite;
 }
 
-/* Card hover lift effect */
+/* Orb decorations */
+.orb-animated {
+  animation: orbFloat 14s ease-in-out infinite;
+}
+
+/* Counter reveal */
+.counter-animated {
+  animation: counterUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Typewriter cursor */
+.cursor-blink::after {
+  content: '|';
+  display: inline-block;
+  animation: typewriter 1s step-end infinite;
+  color: #246BFD;
+  font-weight: 300;
+}
+
+/* Glow pulse */
+.glow-pulse {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Slide in utilities */
+.slide-in-left  { animation: slideInLeft  0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.slide-in-right { animation: slideInRight 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.slide-in-up    { animation: slideInUp    0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.scale-in       { animation: scaleIn      0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* Legacy helpers */
+.float-animation  { animation: floatGentle 5s ease-in-out infinite; }
+.pulse-animation  { animation: pulseGlow  2.5s infinite; }
+
+/* Card hover lift */
 .hover-lift {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
-
 .hover-lift:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Prefer Reduced Motion Accessibility */
+/* ==========================================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -135,14 +252,22 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
-  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
-  
-  .float-animation {
+
+  .float-animation,
+  .orb-animated,
+  .shimmer,
+  .gradient-animated,
+  .glow-pulse,
+  .cursor-blink::after {
     animation: none !important;
   }
 }

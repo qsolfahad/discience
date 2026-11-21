@@ -860,3 +860,239 @@ ul, ol {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(36, 107, 253, 0.55);
 }
+
+
+/* ==========================================================================
+   PREMIUM ADDITIONS
+   ========================================================================== */
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #246BFD 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+}
+
+/* Glowing accent line */
+.section-accent-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #246BFD, #8B5CF6);
+  border-radius: 9999px;
+  margin: 0 auto 24px;
+}
+
+/* Premium orb background decorations */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-blue   { background: rgba(36,107,253,0.18); }
+.orb-purple { background: rgba(139,92,246,0.14); }
+.orb-teal   { background: rgba(20,184,166,0.12); }
+
+/* Number counter */
+.counter-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  background: linear-gradient(135deg, #246BFD, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #246BFD, #8B5CF6, #14B8A6);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gradient-border:hover::before { opacity: 1; }
+
+/* Tag chips */
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.tag-chip-blue   { background: rgba(36,107,253,0.1);  color: #246BFD; }
+.tag-chip-green  { background: rgba(16,185,129,0.1);  color: #059669; }
+.tag-chip-purple { background: rgba(139,92,246,0.1);  color: #7C3AED; }
+
+/* App download buttons */
+.app-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #101B35;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  text-decoration: none;
+}
+.app-store-btn:hover {
+  background: #246BFD;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(36,107,253,0.35);
+}
+.app-store-btn svg          { width: 22px; height: 22px; flex-shrink: 0; }
+.app-store-btn-label        { font-size: 0.65rem; opacity: 0.75; display: block; font-weight: 400; }
+.app-store-btn-name         { font-size: 0.95rem; font-weight: 700; display: block; line-height: 1.2; }
+
+/* Hero section upgrade */
+.hero-section {
+  background: linear-gradient(150deg, #0D1829 0%, #101B35 60%, #0A1829 100%) !important;
+  border-bottom: none !important;
+}
+
+/* Hero stats upgrade */
+.hero-stats-strip {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.stat-item   { text-align: left; }
+.stat-number {
+  font-size: 2rem !important;
+  font-weight: 800;
+  color: #fff !important;
+  font-family: var(--font-heading);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55) !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+.hero-content   { color: #fff; }
+.hero-headline  { color: #fff !important; }
+.hero-desc      { color: rgba(255,255,255,0.72) !important; }
+
+/* Service card upgrades */
+.service-card {
+  border-radius: 20px !important;
+  padding: 36px !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #246BFD, #8B5CF6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.service-card:hover::before { opacity: 1; }
+.service-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 24px 48px rgba(36,107,253,0.14) !important;
+}
+.service-icon-box {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, rgba(36,107,253,0.12), rgba(139,92,246,0.08)) !important;
+  color: #246BFD !important;
+}
+
+/* Why card upgrades */
+.why-card {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 20px !important;
+  padding: 36px !important;
+  transition: all 0.3s ease;
+}
+.why-card:hover {
+  background: rgba(36,107,253,0.1) !important;
+  border-color: rgba(36,107,253,0.3) !important;
+  transform: translateY(-4px);
+}
+.why-icon-box {
+  background: linear-gradient(135deg, #246BFD, #8B5CF6) !important;
+  border-radius: 14px !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+/* Project card premium */
+.project-card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 60px rgba(36,107,253,0.15);
+  border-color: rgba(36,107,253,0.3);
+}
+.project-image-box img {
+  transition: transform 0.5s ease;
+}
+.project-card:hover .project-image-box img {
+  transform: scale(1.05);
+}
+
+/* Footer premium */
+.site-footer {
+  background: linear-gradient(135deg, #080F20 0%, #101B35 100%) !important;
+}
+
+/* Section navy premium */
+.section-navy {
+  background: linear-gradient(135deg, #0A1124 0%, #101B35 50%, #0D1829 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CTA section upgrade */
+.cta-section {
+  background: linear-gradient(135deg, #101B35 0%, #0A1124 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
